@@ -20,6 +20,7 @@ Include the snippet to display your movies on a page
 
 ## Example 
 
+https://mirthe.org/films/
 <img src="example.png" alt="Example">
 
 ## Todo
