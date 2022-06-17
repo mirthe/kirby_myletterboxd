@@ -1,0 +1,13 @@
+{
+    "name": "mirthe/myletterboxd",
+    "description": "Show recently watched movies for a Letterboxd account",
+    "keywords": ["kirby-plugin", "letterboxd", "movies", "watched"],
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mirthe Valentijn",
+            "email": "me@Mirthe.org"
+        }
+    ]
+}
