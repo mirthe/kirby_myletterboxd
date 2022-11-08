@@ -34,19 +34,19 @@
                 <span class="nowrap" style="float: right;">
                     <?php
                 for ($i = 1; $i <= floor((int)$item->letterboxd_memberRating); $i++) {
-                    echo '<i class="fa fa-star fa-active"></i>';
+                    echo '<i class="fa-solid fa-star"></i>';
                 }
 
                 if (floor((int)$item->letterboxd_memberRating) !== round((int)$item->letterboxd_memberRating)) {
-                    echo '<i class="fa fa-star-half fa-active"></i>';
-                    echo '<i class="fa fa-star-half fa-flip-horizontal fa-inactive"></i>';
+                    echo '<i class="fa-solid fa-star-half"></i>';
+                    echo '<i class="fa-solid fa-star-half fa-flip-horizontal fa-inactive"></i>';
                     $aanvullen = floor((int)$item->letterboxd_memberRating) + 1;
                 } else {
                     $aanvullen = floor((int)$item->letterboxd_memberRating);
                 }
 
                 for ($i = $aanvullen; $i < 5; $i++) {
-                    echo '<i class="fa fa-star fa-inactive"></i>';
+                    echo '<i class="fa-solid fa-star fa-inactive"></i>';
                 }
         ?>
                 </span>
