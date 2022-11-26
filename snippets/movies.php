@@ -32,13 +32,9 @@
                 </span>
 
                 <span class="nowrap" style="float: right;">
-                <?php
-                for ($i = 1; $i <= $item->letterboxd_memberRating; $i++) {
+                <?php for ($i = 1; $i <= $item->letterboxd_memberRating; $i++) {
                     echo '<i class="fa-solid fa-star"></i>';
                 }
-
-                // <i class="fa-solid fa-square fa-stack-2x"></i>
-                // <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
 
                 if ( (float)$item->letterboxd_memberRating !== round((int)$item->letterboxd_memberRating)) {
                     echo '<i class="fa-solid fa-star-half-stroke"></i>';
@@ -54,7 +50,9 @@
                 for ($i = $aanvullen; $i < 5; $i++) {
                     echo '<i class="fa-solid fa-star fa-inactive"></i>';
                 }
-                ?>
+                
+                // TODO aria toevoegen
+                // https://www.google.com/search?&q=star%20rating%20aria ?>
                 </span>
             </p>
 
