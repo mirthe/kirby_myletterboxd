@@ -1,12 +1,13 @@
-<?php include('getmovies.php'); ?>
+<?php include_once ('getmovies.php'); ?>
 
 <div class="masonry">
-    <?php foreach($rss->channel->item as $item) { ?>
+<?php foreach ($rss->channel->item as $item): ?>
 
-    <?php if ($item->letterboxd_filmTitle) { ?>
+    <?php if ($item->letterboxd_filmTitle): ?>
     <div class="block block--film">
 
-        <?php $doc = new DOMDocument();
+        <?php $img = "";
+        $doc = new DOMDocument();
         $doc->loadHTML($item->description);
         $imageTags = $doc->getElementsByTagName('img');
 
@@ -16,11 +17,15 @@
         
         $mijnreview = strip_tags(html_entity_decode($item->description)); ?>
 
-        <a href="<?= $item->link ?>">
-            <img class="block--img" width="500" height="750"
-                src="<?= $img ?>"
-                alt="Cover <?= $item->letterboxd_filmTitle ?>">
-        </a>
+        <?php if ($img !== ''): ?>
+            <a href="<?= $item->link ?>">
+                <img class="block--img" width="500" height="750"
+                    src="<?= $img ?>"
+                    alt="Cover <?= $item->letterboxd_filmTitle ?>">
+            </a>
+        <?php else: ?>
+            <a href="<?= $item->link ?>" class='block--fallback'></a>
+        <?php endif ?>
 
         <div class="block--body">
             <p><a href="<?= $item->link ?>"><?= $item->letterboxd_filmTitle ?></a>
@@ -57,12 +62,12 @@
             </p>
 
             <?php if(substr(trim($mijnreview), 0, 10) !== 'Watched on'): ?>
-            <?= $mijnreview ?>
+                <?= $mijnreview ?>
             <?php endif ?>
         </div>
 
     </div>
-    <?php } ?>
+    <?php endif ?>
 
-    <?php } ?>
+<?php endforeach ?>
 </div>
