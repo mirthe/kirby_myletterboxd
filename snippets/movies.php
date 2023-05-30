@@ -43,10 +43,6 @@
 
                 if ( (float)$item->letterboxd_memberRating !== round((int)$item->letterboxd_memberRating)) {
                     echo '<i class="fa-solid fa-star-half-stroke"></i>';
-                    // echo '<span class="fa-stack"
-                    // <i class="fa-solid  fa-stack-1x fa-star-half"></i> 
-                    // <i class="fa-solid  fa-stack-1x fa-star-half fa-flip-horizontal fa-inactive"></i>
-                    // </span>';
                     $aanvullen = round((int)$item->letterboxd_memberRating) + 1;
                 } else {
                     $aanvullen = round((int)$item->letterboxd_memberRating);
@@ -54,10 +50,7 @@
 
                 for ($i = $aanvullen; $i < 5; $i++) {
                     echo '<i class="fa-solid fa-star fa-inactive"></i>';
-                }
-                
-                // TODO aria toevoegen
-                // https://www.google.com/search?&q=star%20rating%20aria ?>
+                } ?>
                 </span>
             </p>
 
