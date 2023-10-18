@@ -31,7 +31,8 @@
             <p><a href="<?= $item->link ?>"><?= $item->letterboxd_filmTitle ?></a>
                 <?= $item->letterboxd_filmYear ?><br>
                 <span style="color: silver">
-                    <?= strftime("%e %b %Y", strtotime($item->letterboxd_watchedDate)) ?>
+                    <?php $formatter = new IntlDateFormatter('nl_NL', IntlDateFormatter::LONG, IntlDateFormatter::NONE); ?>
+                    <?= $formatter->format(strtotime($item->letterboxd_watchedDate)) ?>
                     <?php if ($item->letterboxd_rewatch == 'Yes'): ?>
                     &bull; Rewatch<?php endif ?>
                 </span>
