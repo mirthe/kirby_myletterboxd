@@ -30,14 +30,12 @@
         <div class="block--body">
             <p><a href="<?= $item->link ?>"><?= $item->letterboxd_filmTitle ?></a>
                 <?= $item->letterboxd_filmYear ?><br>
-                <span style="color: silver">
-                    <?php $formatter = new IntlDateFormatter('nl_NL', IntlDateFormatter::LONG, IntlDateFormatter::NONE); ?>
-                    <?= $formatter->format(strtotime($item->letterboxd_watchedDate)) ?>
-                    <?php if ($item->letterboxd_rewatch == 'Yes'): ?>
-                    &bull; Rewatch<?php endif ?>
-                </span>
-
-                <span class="nowrap" style="float: right;">
+                
+                <?php if ($item->letterboxd_rewatch == 'Yes'): ?>
+                    <span style="color: silver; float: right">Rewatch</span>
+                <?php endif ?>
+                
+                <span class="nowrap">
                 <?php for ($i = 1; $i <= $item->letterboxd_memberRating; $i++) {
                     echo '<i class="fa-solid fa-star"></i>';
                 }
