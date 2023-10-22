@@ -48,7 +48,7 @@
                 }
 
                 for ($i = $aanvullen; $i < 5; $i++) {
-                    echo '<i class="fa-solid fa-star fa-inactive"></i>';
+                    echo '<i class="fa-regular fa-star fa-inactive"></i>';
                 } ?>
                 </span>
             </p>
