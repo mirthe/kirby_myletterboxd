@@ -1,6 +1,6 @@
 {
     "name": "mirthe/kirby_myletterboxd",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Show recently watched movies for a Letterboxd account",
     "homepage": "https://github.com/mirthe/kirby_myletterboxd",
     "keywords": ["kirby-plugin", "letterboxd", "movies", "watched"],
