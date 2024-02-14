@@ -18,6 +18,10 @@ Include the snippet to display your movies on a page
 
     <?php snippet('letterboxd-movies-watched'); ?>
 
+Recently added a compact listing for my Now page, with an optional limit
+
+    <?php snippet('letterboxd-movies-watched-compact', ['limit' => 3 ]) ?>
+
 ## Example 
 
 <img src="example.png" alt="Example">
