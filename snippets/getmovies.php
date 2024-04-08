@@ -1,8 +1,9 @@
 <?php $localfile =  __DIR__ . "/letterboxd.rss";
    $feedurl = "https://letterboxd.com/" . option('letterboxd.username') . "/rss/";
 
-    if (!file_exists($localfile) OR time()-filemtime($localfile) > 2 * 3600 || isset($_GET['forcecache'])) {
-        
+    if (!file_exists($localfile) || time()-filemtime($localfile) > 3600 || isset($_GET['forcecache'])) {
+    // when file is not available, older than 1 hour, or forced
+
         $ch = curl_init($feedurl);
         curl_setopt($ch, CURLOPT_URL, $feedurl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
