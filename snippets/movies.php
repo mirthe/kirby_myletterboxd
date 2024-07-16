@@ -54,7 +54,7 @@
             </p>
 
             <?php if(substr(trim($mijnreview), 0, 10) !== 'Watched on'): ?>
-                <?= $mijnreview ?>
+                <p class="review"><?= $mijnreview ?></p>
             <?php endif ?>
         </div>
 
