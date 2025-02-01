@@ -23,7 +23,9 @@
         $feeds = file_get_contents($localfile);
     }
 
+    
     // Will replace : in tags and attributes names with _ allowing easy access
-    $feeds = preg_replace('~(</?|\s)([a-z0-9_]+):~is', '$1$2_', $feeds);
+    $feeds = preg_replace('~(</?|\s)([a-z0-9_]+):~is', '$1$2_', trim($feeds));
+    // print_r($feeds); exit();
     $rss = simplexml_load_string($feeds);
 
