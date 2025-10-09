@@ -7,6 +7,7 @@
         $ch = curl_init($feedurl);
         curl_setopt($ch, CURLOPT_URL, $feedurl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERAGENT, $site->title());
 
         // letterboxd certificate expired.. :-(
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
