@@ -1,6 +1,6 @@
 <?php include_once ('getmovies.php'); ?>
 
-<div class="masonry">
+<div class="grid">
 <?php foreach ($rss->channel->item as $item): ?>
 
     <?php if ($item->letterboxd_filmTitle): ?>

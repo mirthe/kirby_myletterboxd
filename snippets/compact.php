@@ -1,6 +1,6 @@
 <?php include_once ('getmovies.php'); ?>
 
-<div class="masonry">
+<div class="grid">
 <?php $counter = 0;
 foreach ($rss->channel->item as $item):
 
