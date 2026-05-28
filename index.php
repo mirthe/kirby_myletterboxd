@@ -2,7 +2,8 @@
 
 Kirby::plugin('mirthe/myletterboxd', [
     'options' => [
-        'username' => null
+        'username' => null,
+        'cache' => true
     ],
     'snippets' => [
         'letterboxd-movies-watched' => __DIR__ . '/snippets/movies.php',
