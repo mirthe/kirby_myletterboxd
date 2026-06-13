@@ -32,7 +32,7 @@
                 <?= $item->letterboxd_filmYear ?><br>
                 
                 <?php if ($item->letterboxd_rewatch == 'Yes'): ?>
-                    <span style="color: silver; float: right">Rewatch</span>
+                    <span style="color: silver; float: right"><?= t('mirthe.myletterboxd.rewatch') ?></span>
                 <?php endif ?>
                     
                 <?php if($item->letterboxd_memberRating > 0): ?>
