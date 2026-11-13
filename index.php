@@ -2,7 +2,7 @@
 
 Kirby::plugin('mirthe/myletterboxd', [
     'options' => [
-        'username' => null,
+        'username' => option('letterboxd.username'),
         'cache' => true
     ],
     'snippets' => [

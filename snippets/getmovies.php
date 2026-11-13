@@ -1,7 +1,8 @@
 <?php
-$feedurl = "https://letterboxd.com/" . option('letterboxd.username') . "/rss/";
+$username = option('mirthe.myletterboxd.username');
+$feedurl = "https://letterboxd.com/" . $username . "/rss/";
 $cache = kirby()->cache('mirthe.myletterboxd');
-$cacheKey = 'letterboxd-rss-' . strtolower(option('letterboxd.username'));
+$cacheKey = 'letterboxd-rss-' . strtolower($username);
 $feeds = $cache->get($cacheKey);
 $force = isset($_GET['forcecache']);
 
